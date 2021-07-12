@@ -4,8 +4,9 @@
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-8">
-            <div class="card">
-                <div class="card-header">{{ __('Login') }}</div>
+        <br><div  class="row justify-content-center"><h2><b>HOSPITAL MANAGEMENT SYSTEM</b></h2></div><br>
+            <div class="card" >
+                <div class="card-header"  style="background-color:#0362fc;">{{ __('Login') }}</div>
 
                 <div class="card-body">
                     <form method="POST" action="{{ route('login') }}">
