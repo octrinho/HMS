@@ -17,14 +17,16 @@ Route::get('/', function () {
     return view('auth.login');
 });
 
-Route::get('/master', function () {
-    // return view('welcome');
-    return view('layouts.master');
-});
-Auth::routes();
-
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
 Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'doctor_home'])->name('home');
+Route::get('/admin_home', [App\Http\Controllers\HomeController::class, 'admin_home'])->name('admin_home');
+
+
+
+Route::get('/admin',[App\Http\Controllers\HomeController::class, 'admin'])->name('admin')->middleware('admin');
+Route::get('/receptionist',[App\Http\Controllers\HomeController::class, 'receptionist'])->name('receptionist')->middleware('receptionist');
+Route::get('/doctor',[App\Http\Controllers\HomeController::class, 'doctor'])->name('doctor')->middleware('doctor');
 
 
