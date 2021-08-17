@@ -1,7 +1,9 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
+use App\Models\Admin;
+use App\Models\Doctor;
+use App\Models\Receptionist;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -20,13 +22,12 @@ Route::get('/', function () {
 
 Auth::routes();
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'doctor_home'])->name('home');
-Route::get('/admin_home', [App\Http\Controllers\HomeController::class, 'admin_home'])->name('admin_home');
 
 
 
-Route::get('/admin',[App\Http\Controllers\HomeController::class, 'admin'])->name('admin')->middleware('admin');
-Route::get('/receptionist',[App\Http\Controllers\HomeController::class, 'receptionist'])->name('receptionist')->middleware('receptionist');
-Route::get('/doctor',[App\Http\Controllers\HomeController::class, 'doctor'])->name('doctor')->middleware('doctor');
+
+Route::get('/admin',[App\Http\Controllers\HomeController::class, 'admin_home'])->name('admin');
+Route::get('/receptionist',[App\Http\Controllers\HomeController::class, 'receptionist_home'])->name('receptionist');
+Route::get('/doctor',[App\Http\Controllers\HomeController::class, 'doctor_home'])->name('doctor');
 
 

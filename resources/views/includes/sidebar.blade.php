@@ -1,5 +1,5 @@
 <!-- Brand Logo -->
-<div  style="background-color:#0362fc;">
+<div  style="background-color:#007bff;">
   <a href="#" class="brand-link">
     <img src="{{asset('assets/dist/img/avatar.png')}}" alt="Logo" class="brand-image img-circle elevation-3"
           style="opacity: .8">

@@ -6,6 +6,9 @@ use App\Http\Controllers\Controller;
 use App\Providers\RouteServiceProvider;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
 use Auth;
+use App\Models\Admin;
+use App\Models\Doctor;
+use App\Models\Receptionist;
 
 class LoginController extends Controller
 {
@@ -31,15 +34,19 @@ class LoginController extends Controller
 
     public function redirectTo(){
 
-        switch (Auth::user()->id){
+        switch (Auth::user()->role_id){
             case 1:
-                $this->redirectTo = '/admin_home';
+                $this->redirectTo = '/admin';
                 return $this->redirectTo;
                 break;
             case 2:
-                $this->redirectTo = '/ceo';
+                $this->redirectTo = '/doctor';
                 return $this->redirectTo;
                 break;
+            case 3:
+                $this->redirectTo = '/receptionist';
+                return $this->redirectTo;
+                break;    
          
             default:
                 $this->redirectTo = '/login';
