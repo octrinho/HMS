@@ -33,22 +33,13 @@
           </li>
           
           <li class="nav-item has-treeview">
-            <a href="#" class="nav-link">
+            <a href="{{route('userMgnt')}}" class="nav-link">
               <i class="nav-icon fas fa-chart-pie"></i>
               <p>
-                All Activities
-                <i class="right fas fa-angle-left"></i>
+                User Management
               </p>
             </a>
-            <!-- <ul class="nav nav-treeview">
-            
-              
-              <li class="nav-item">
-                <a href="#" class="nav-link">
-                  &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<i class="far fa-circle nav-icon"></i>
-                  <p>Planned Activities</p>
-                </a>
-            </ul> -->
+           
           </li>
 
 

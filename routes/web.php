@@ -29,5 +29,5 @@ Auth::routes();
 Route::get('/admin',[App\Http\Controllers\HomeController::class, 'admin_home'])->name('admin');
 Route::get('/receptionist',[App\Http\Controllers\HomeController::class, 'receptionist_home'])->name('receptionist');
 Route::get('/doctor',[App\Http\Controllers\HomeController::class, 'doctor_home'])->name('doctor');
-
+Route::get('userMgnt',[App\Http\Controllers\UserManagementController::class, 'index'])->name('userMgnt');
 
